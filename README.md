@@ -132,10 +132,10 @@ While ACE provides a robust framework, users should be aware of the following:
 
 ## 🔍 Research Objectives
 
-This project is part of an ongoing study into auction dynamics, specifically exploring:
-- **Predictive Power**: Does prior session structure statistically predict next session behavior?
-- **Directional Reliability**: Are certain profile types (e.g., Double Distribution) more directional than others?
-- **Breakout Validation**: How reliable is Value Area breakout logic across different market regimes?
+This project explores:
+- Does prior session structure predict next session behavior?
+- Are certain profile types more directional?
+- How reliable is value area breakout logic?
 
 ---
 
