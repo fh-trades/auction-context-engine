@@ -91,6 +91,21 @@ python main.py NQ=F
 
 ---
 
+## 📊 Sample Output
+
+The system generates visual analysis of the prior session structure and current market context.
+
+### Nasdaq (NQ)
+![NQ Analysis](NQ=F_analysis.png)
+
+### S&P 500 (ES)
+![ES Analysis](ES=F_analysis.png)
+
+### Gold (GC)
+![GC Analysis](GC=F_analysis.png)
+
+---
+
 ## 🛠️ Installation
 
 1. **Clone the repository**
