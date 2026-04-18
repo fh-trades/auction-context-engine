@@ -1,25 +1,64 @@
-# Future Market Bias Analyzer
+# Auction Context Engine
 
-An automated tool for futures market analysis based on **Volume Profile** structures and **Prior Day** session dynamics.
-
-## 🚀 Overview
-
-This tool identifies daily market bias by analyzing the prior day's trading volume distribution. It classifies market structures into 8 distinct profile types and applies a rules-based bias engine to determine if the current market is **Bullish**, **Bearish**, or **Neutral**.
-
-### Key Features
-- **Automated Data Fetching**: Real-time integration with Yahoo Finance for futures (ES, NQ, CL, etc.).
-- **Profile Classification**: Advanced peak-detection algorithm to identify:
-  - Balanced (D-shape)
-  - Top-heavy (P-shape)
-  - Bottom-heavy (b-shape)
-  - Double & Triple Distributions
-  - Thin (Trend) Profiles
-- **Bias Reasoning Engine**: Provides clear, logical explanations for every bias result (e.g., *"Price is holding between POC and VAH"*).
-- **Visual Analytics**: Automatically generates high-resolution Volume Profile charts with highlighted Value Areas and logic overlays.
+A systematic trading tool that analyzes **prior session volume profile** to generate actionable intraday market bias using **Auction Market Theory (AMT)**.
 
 ---
 
-## 📊 Sample Output
+## 🚀 What This Solves
+
+Most traders lack **context**.
+
+They enter trades without knowing:
+- Where value is established
+- Whether the market is trending or balancing
+- If a breakout is likely to continue or fail
+
+👉 This tool provides that missing context.
+
+---
+
+## 🧠 Core Idea
+
+Markets operate as auctions.
+
+By analyzing the **prior session's volume distribution**, we can identify:
+- Key acceptance/rejection levels (VAH, VAL, POC)
+- Market structure (balanced vs trending)
+- Likely behavior for the current session
+
+---
+
+## ⚙️ Features
+
+- **Prior Session Analysis (CME-style)**
+  - Accurate session timing (18:00 → 16:59 EST)
+  - No multi-day contamination
+
+- **Volume Profile Engine**
+  - Calculates VAH, VAL, POC using 70% value area logic
+  - Distributes volume across price ranges
+
+- **Advanced Profile Classification**
+  - Balanced (D-shape)
+  - Top-heavy (P-shape)
+  - Bottom-heavy (b-shape)
+  - Double / Triple Distribution
+  - Thin (Trend) Profiles
+
+- **Context-Based Bias Engine**
+  - Rule-driven logic based on structure + price location
+  - Outputs:
+    - Bullish / Bearish / Neutral
+    - Clear reasoning
+
+- **Visualization**
+  - Clean volume profile charts
+  - Highlighted value areas
+  - Bias and reasoning overlay
+
+---
+
+## 📊 Example Output
 
 When you run the analyzer, it generates a visual report:
 
@@ -27,39 +66,34 @@ When you run the analyzer, it generates a visual report:
 
 ---
 
+## 📈 How Traders Can Use This
+
+This tool helps answer key intraday questions:
+
+- Is the market likely to **trend or rotate**?
+- Should I trade **breakouts or mean reversion**?
+- Is the current move **acceptance or rejection**?
+
+### Example Interpretations:
+
+- **Price above VAH → Bullish continuation**
+- **Top-heavy profile + price below POC → Bearish bias**
+- **Balanced profile → Expect range behavior unless breakout**
+
+---
+
 ## 🛠️ Installation
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/fh-trades/market-bias-analyzer.git
-   cd market-bias-analyzer
+   git clone https://github.com/fh-trades/auction-context-engine.git
+   cd auction-context-engine
    ```
 
 2. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
-
----
-
-## 📖 Usage
-
-Run the analysis for any futures ticker (e.g., ES=F, NQ=F, GC=F, CL=F):
-
-```powershell
-python main.py NQ=F
-```
-
----
-
-## 🧠 Bias Logic
-
-The tool applies specific rules based on the detected profile:
-
-- **Top-heavy**: Bullish if price > VAH, Bearish if price < POC.
-- **Bottom-heavy**: Bullish if price > POC, Bearish if price < VAL.
-- **Double/Triple Distributions**: Trend continuation vs. Reversal risk logic.
-- **Balanced**: Standard Value Area breakout logic.
 
 ---
 
