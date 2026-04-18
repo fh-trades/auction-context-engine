@@ -33,13 +33,13 @@ def get_bias(profile_type, current_price, profile_data):
         else:
             return "Neutral", f"Price ({current_price:.2f}) is holding between VAL and POC"
             
-    elif "double-distribution(uptrend)" in p_type or "tripple-distribution(uptrend)" in p_type:
+    elif "double-distribution(uptrend)" in p_type or "triple-distribution(uptrend)" in p_type:
         if current_price > vah:
             return "Bullish", f"Price ({current_price:.2f}) is above VAH ({vah:.2f}) - Uptrend continuation"
         else:
             return "Bearish", f"Price ({current_price:.2f}) is below VAH ({vah:.2f}) - Uptrend reversal risk"
             
-    elif "double-distribution(downtrend)" in p_type or "tripple-distribution(downtrend)" in p_type:
+    elif "double-distribution(downtrend)" in p_type or "triple-distribution(downtrend)" in p_type:
         if current_price > val:
             return "Bullish", f"Price ({current_price:.2f}) is above VAL ({val:.2f}) - Downtrend recovery"
         else:

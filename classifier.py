@@ -31,7 +31,7 @@ def classify_profile(profile_data, df):
         return f"Thin Profile({'uptrend' if is_uptrend else 'downtrend'})"
 
     if num_peaks == 3:
-        return f"Tripple-distribution({'uptrend' if is_uptrend else 'downtrend'}) profile"
+        return f"Triple-distribution({'uptrend' if is_uptrend else 'downtrend'}) profile"
     elif num_peaks == 2:
         return f"Double-distribution({'uptrend' if is_uptrend else 'downtrend'}) Profile"
     
