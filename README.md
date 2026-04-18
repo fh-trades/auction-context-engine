@@ -62,7 +62,14 @@ By analyzing the **prior session's volume distribution**, we can identify:
 
 When you run the analyzer, it generates a visual report:
 
-![Sample Analysis](NQ=F_analysis.png)
+### Nasdaq (NQ)
+![NQ Analysis](NQ=F_analysis.png)
+
+### S&P 500 (ES)
+![ES Analysis](ES=F_analysis.png)
+
+### Gold (GC)
+![GC Analysis](GC=F_analysis.png)
 
 ---
 
