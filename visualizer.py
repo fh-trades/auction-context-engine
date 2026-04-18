@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-def plot_profile(ticker, profile_data, profile_type, current_price, bias, reasoning, confidence):
+def plot_profile(ticker, profile_data, profile_type, current_price, bias, reasoning):
     """
     Visualize the volume profile, levels, and bias logic.
     """
@@ -30,7 +30,7 @@ def plot_profile(ticker, profile_data, profile_type, current_price, bias, reason
     
     # Title and Reasoning
     plt.suptitle(f"{ticker} - {profile_type}", fontsize=18, fontweight='bold')
-    ax.set_title(f"BIAS: {bias} (Confidence: {confidence:.2f})\n{reasoning}", fontsize=12, color='darkblue', style='italic', pad=20)
+    ax.set_title(f"BIAS: {bias}\n{reasoning}", fontsize=12, color='darkblue', style='italic', pad=20)
     
     ax.set_xlabel('Volume')
     ax.set_ylabel('Price')
@@ -38,7 +38,5 @@ def plot_profile(ticker, profile_data, profile_type, current_price, bias, reason
     ax.grid(axis='x', linestyle=':', alpha=0.6)
     
     plt.tight_layout(rect=[0, 0.03, 1, 0.95])
-    # Save the plot to the workspace
     plt.savefig(f"{ticker}_analysis.png")
     print(f"Analysis chart saved as {ticker}_analysis.png")
-    # plt.show() # Disabled for headless/script usage, but user can open the file
