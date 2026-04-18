@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+.venv
+env/
+venv/
+ENV/
+*.png
+!NQ=F_analysis.png
+!ES=F_analysis.png
+!GC=F_analysis.png
