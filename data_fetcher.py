@@ -34,3 +34,20 @@ def get_current_price(ticker: str):
     except:
         pass
     return None
+
+def calculate_atr(df: pd.DataFrame, period: int = 14):
+    """
+    Calculate ATR from a dataframe.
+    """
+    if len(df) < period:
+        return None
+        
+    high_low = df['High'] - df['Low']
+    high_close = (df['High'] - df['Close'].shift()).abs()
+    low_close = (df['Low'] - df['Close'].shift()).abs()
+    
+    ranges = pd.concat([high_low, high_close, low_close], axis=1)
+    true_range = ranges.max(axis=1)
+    atr = true_range.rolling(period).mean()
+    
+    return atr.iloc[-1]

@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-def plot_profile(ticker, profile_data, profile_type, current_price, bias, reasoning):
+def plot_profile(ticker, profile_data, profile_type, current_price, bias, reasoning, confidence):
     """
     Visualize the volume profile, levels, and bias logic.
     """
@@ -30,7 +30,7 @@ def plot_profile(ticker, profile_data, profile_type, current_price, bias, reason
     
     # Title and Reasoning
     plt.suptitle(f"{ticker} - {profile_type}", fontsize=18, fontweight='bold')
-    ax.set_title(f"BIAS: {bias}\n{reasoning}", fontsize=12, color='darkblue', style='italic', pad=20)
+    ax.set_title(f"BIAS: {bias} (Confidence: {confidence:.2f})\n{reasoning}", fontsize=12, color='darkblue', style='italic', pad=20)
     
     ax.set_xlabel('Volume')
     ax.set_ylabel('Price')
