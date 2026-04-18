@@ -121,5 +121,23 @@ The system generates visual analysis of the prior session structure and current 
 
 ---
 
+## ⚠️ Limitations
+
+While ACE provides a robust framework, users should be aware of the following:
+- **High Volatility**: Model reliability decreases during major news events or high-volatility spikes.
+- **Balanced Profiles**: Directional bias is less reliable in highly rotational/balanced markets.
+- **Session Anomalies**: Performance is sensitive to gaps or extreme session-start anomalies.
+
+---
+
+## 🔍 Research Objectives
+
+This project is part of an ongoing study into auction dynamics, specifically exploring:
+- **Predictive Power**: Does prior session structure statistically predict next session behavior?
+- **Directional Reliability**: Are certain profile types (e.g., Double Distribution) more directional than others?
+- **Breakout Validation**: How reliable is Value Area breakout logic across different market regimes?
+
+---
+
 ## 📄 License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
